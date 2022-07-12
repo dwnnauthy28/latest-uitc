@@ -1,0 +1,30 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    background:linear-gradient(#f44336,#9e9e9e);
+    color:black;
+  }
+  
+  .login-container{
+    height: 100vh;
+    width: 100%;
+     
+  }
+  .login-form{
+    margin: auto;
+    width: 370px;
+    padding: 15px;
+    max-width: 100%;
+  }
+  .login-form .form-control{
+    font-size: 15px;
+    min-height: 48px;
+    font-weight: 500;
+  }
+  img
+  {
+    width: 200px;
+    border-radius: 100px;
+  
+  }
+  

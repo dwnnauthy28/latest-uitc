@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+.navbar {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: .9rem;
+    letter-spacing: .1rem;
+    background: rgba(0,0,0,0.6)!important;
+}
+.navbar-brand {
+    height: 2rem;
+}
+.navbar-nav li {
+    padding-right: .7rem;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+    padding-top: .8rem;
+}
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #f44336;
+}
+.card{
+    background: white;
+    padding: 20px 25px;
+    margin: 30px 0;
+    border-radius: 1px;
+
+}
+
+.card .row-add{
+    float: right;
+}
+body
+{
+    background: linear-gradient(#f44336,#9e9e9e)
+}

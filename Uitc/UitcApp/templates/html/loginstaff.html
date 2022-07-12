@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+<head>
+    <title>Staff Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="{% static 'javascript/Loginstaff.js' %}"></script>
+
+    <link rel="stylesheet" type = "text/css" href="{% static '/css/loginstaff.css' %}">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="{%url 'userpage'%}">UITC</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{%url 'userpage'%}">Home</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="d-flex justify-content-center align-items-center login-container">
+        <form action= "/loginstaff/" method= "POST"class="login-form text-center">
+            {% csrf_token %}
+            <h1 class="font-weight-light text-uppercase">Staff Login</h1>
+            <img src="{% static 'Media/icon.jpg' %}" alt="Staff Login">
+            <div class="form-group">
+                {{username}}
+                <input type="text" class="form-control rounded-pill form-control-lg" id="usernmae" name="username" placeholder="Username" required>
+            </div>
+            <div class="form-group">
+                {{password}}
+                <input type="password" class="form-control rounded-pill form-control-lg" id="password" name="password" placeholder="Password" required>
+            </div>
+            <button type="submit" class="btn  rounded-pill btn-lg btn-primary btn-block text-uppercase login_btn" value="login">Log in</button>
+            <p class="mt-3 font-weight-normal">Doesn't have an account? <a href="{%url 'registration2' %}" ><strong>Sign Up</strong></a></p>
+        </form>
+    </div>
+</body>
+
+{% block js_block %}
+    <script type ="text/javascript" src="{% static 'javascript/loginborrower.js'%}"></script>
+{% endblock %}
+
+</html>
